@@ -1,5 +1,5 @@
 # Dashkote-Automation
 
-This is my first commit!
+  * This is my first commit!
 
-Adding another new line!
+  * Adding another new line!
