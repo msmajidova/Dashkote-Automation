@@ -2,4 +2,5 @@
 
 ### Table of Contents
 
-* [**Linux Guide**](Linux_Guide.md)
+* [**Linux Guide**](Guide/Linux_Guide.md)
+* [**Git Guide**](Guide/Git_Guide.md)
