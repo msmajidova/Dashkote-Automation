@@ -75,14 +75,13 @@ public class LoginPageTest {
         Assert.assertEquals(driver.getTitle(), "Dashkote - Bootstrap5 Admin Template");
     }
 
-
     @Test // TC4: Verify Login page Header
     public void TC4() {
-
-
+        // Step1 : Navigate to Log in Page
+        driver.get(loginURL);
+        // Step2:  Verify page Header "Welcome to Dashkote" is present
+        String header = driver.findElement(By.xpath("//h2")).getText();
+        Assert.assertEquals(header, "Welcome to Dashkote");
     }
-
-
-
 
 }
