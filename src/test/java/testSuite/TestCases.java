@@ -12,6 +12,8 @@ public class TestCases {
         // Open the Browser
         WebDriver driver = WebDriverManager.chromedriver().create();
 
+        // Maximize the Browser
+
         // Navigate to Dashkote website
         driver.get("https://davracademy.com/");
 
