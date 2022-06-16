@@ -18,8 +18,7 @@ public class LoginPageTest {
     @BeforeTest
     public void beforeTestExecutes(){
         // Start the session
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = WebDriverManager.chromedriver().create();
         driver.manage().window().maximize();
     }
 
