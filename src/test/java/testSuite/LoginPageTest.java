@@ -8,24 +8,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pages.LoginPage;
 
 
-public class LoginPageTest {
-
-    WebDriver driver;
-    String loginURL = "https://msmajidova.github.io/Dashkote-Automation/";
-
-    @BeforeTest
-    public void beforeTestExecutes(){
-        // Start the session
-        driver = WebDriverManager.chromedriver().create();
-        driver.manage().window().maximize();
-    }
-
-    @AfterTest
-    public void cleanup(){
-        driver.quit();
-    }
+public class LoginPageTest extends BaseTest {
 
     @Test // TC1: Verify User can navigate to website
     public void TC1(){
@@ -83,4 +69,23 @@ public class LoginPageTest {
         Assert.assertEquals(header, "Welcome to Dashkote");
     }
 
+    @Test
+    public void VerifyValidSignIn(){
+        // Create instance of LoginPage
+        LoginPage loginPage = new LoginPage(driver);
+
+        // Navigate to LoginPage
+        driver.get("https://msmajidova.github.io/Dashkote-Automation/");
+
+        // Select checkbox
+        loginPage.selectCheckbox();
+
+        // Login
+        loginPage.login();
+
+        // Verify user is in Home page
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(actualTitle, "Dashkote - Bootstrap5 Admin Template");
+
+    }
 }

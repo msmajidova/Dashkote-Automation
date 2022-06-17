@@ -33,6 +33,7 @@ public class DashboardPageTest {
         Assert.assertEquals(actualTitle, "Dashboard");
     }
 
+    @Test
     public void TestCase_02_UserShouldBeAbleToSearchFromDashboard(){
 
     }

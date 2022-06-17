@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class HomePageTest {
+public class HomePageTest extends BaseTest {
 
     WebDriver driver;
     String url;
@@ -54,6 +54,8 @@ public class HomePageTest {
 
     @Test
     public void test_01(){
+
+        System.out.println(loginName);
 
         // Signin - Enter Username and Password
         System.out.println("Username is " + username + ". Password is: " + password + ". Url is: " + url);
